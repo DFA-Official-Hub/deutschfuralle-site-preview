@@ -130,5 +130,5 @@ if(!(l.url&&l.url.trim()))return'';const ext=!l.url.startsWith('mailto:');
 const note=l.note?'<ul class="note">'+l.note.split('\n').map(x=>{const[a,b]=x.split(' – ');return '<li>'+e(a)+(b?'<b>'+e(b)+'</b>':'')+'</li>'}).join('')+'</ul>':'';
 return `<li><a class="btn${l.note?' feat':''}" data-id="${e(l.id)}" href="${e(tag(l.url))}"${ext?' target="_blank" rel="noopener"':''}${l.click?` data-goatcounter-click="${e(l.click)}" data-goatcounter-title="${e(l.clickTitle||l.label)}"`:''}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${e(I[l.icon]||'')}"/></svg><span class="lbl">${e(l.label)}</span><span class="arr">›</span>${note}</a></li>`}).join('');window.goatcounter&&goatcounter.bind_events&&goatcounter.bind_events()}catch(err){/* keep prerendered fallback */}})();
 </script>
-<script data-goatcounter="https://deutschfuralle.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+</body>
 </html>
